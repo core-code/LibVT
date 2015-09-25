@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B913F1AC11A75A61003B6CB6 /* libjpegturbo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B913F1AB11A75A61003B6CB6 /* libjpegturbo.a */; };
+		B9ECD5561180B62F0048E6AB /* osgvt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD5541180B62F0048E6AB /* osgvt.cpp */; };
+		B9ECD5571180B62F0048E6AB /* osgvt_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD5551180B62F0048E6AB /* osgvt_util.cpp */; };
+		B9ECD6F61180B7E60048E6AB /* OpenThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6E61180B7E60048E6AB /* OpenThreads.framework */; };
+		B9ECD6F71180B7E60048E6AB /* osg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6E71180B7E60048E6AB /* osg.framework */; };
+		B9ECD6F91180B7E60048E6AB /* osgDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6E91180B7E60048E6AB /* osgDB.framework */; };
+		B9ECD6FA1180B7E60048E6AB /* osgFX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6EA1180B7E60048E6AB /* osgFX.framework */; };
+		B9ECD6FB1180B7E60048E6AB /* osgGA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6EB1180B7E60048E6AB /* osgGA.framework */; };
+		B9ECD6FC1180B7E60048E6AB /* osgIntrospection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6EC1180B7E60048E6AB /* osgIntrospection.framework */; };
+		B9ECD6FD1180B7E60048E6AB /* osgManipulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6ED1180B7E60048E6AB /* osgManipulator.framework */; };
+		B9ECD6FE1180B7E60048E6AB /* osgParticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6EE1180B7E60048E6AB /* osgParticle.framework */; };
+		B9ECD6FF1180B7E60048E6AB /* osgShadow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6EF1180B7E60048E6AB /* osgShadow.framework */; };
+		B9ECD7001180B7E60048E6AB /* osgSim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6F01180B7E60048E6AB /* osgSim.framework */; };
+		B9ECD7011180B7E60048E6AB /* osgTerrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6F11180B7E60048E6AB /* osgTerrain.framework */; };
+		B9ECD7021180B7E60048E6AB /* osgText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6F21180B7E60048E6AB /* osgText.framework */; };
+		B9ECD7031180B7E60048E6AB /* osgUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6F31180B7E60048E6AB /* osgUtil.framework */; };
+		B9ECD7041180B7E60048E6AB /* osgViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6F41180B7E60048E6AB /* osgViewer.framework */; };
+		B9ECD7051180B7E70048E6AB /* osgWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD6F51180B7E60048E6AB /* osgWidget.framework */; };
+		B9ECD9C21180BD430048E6AB /* LibVT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9B21180BD430048E6AB /* LibVT.cpp */; };
+		B9ECD9C31180BD430048E6AB /* LibVT_Cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9B41180BD430048E6AB /* LibVT_Cache.cpp */; };
+		B9ECD9C41180BD430048E6AB /* LibVT_ImageDecompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9B61180BD430048E6AB /* LibVT_ImageDecompression.cpp */; };
+		B9ECD9C71180BD430048E6AB /* LibVT_PageLoadingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9BA1180BD430048E6AB /* LibVT_PageLoadingThread.cpp */; };
+		B9ECD9C81180BD430048E6AB /* LibVT_PageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9BB1180BD430048E6AB /* LibVT_PageTable.cpp */; };
+		B9ECD9C91180BD430048E6AB /* LibVT_Readback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9BC1180BD430048E6AB /* LibVT_Readback.cpp */; };
+		B9ECD9CA1180BD430048E6AB /* LibVT_Utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9ECD9BD1180BD430048E6AB /* LibVT_Utilities.cpp */; };
+		B9ECD9CB1180BD430048E6AB /* readback.frag in Resources */ = {isa = PBXBuildFile; fileRef = B9ECD9BE1180BD430048E6AB /* readback.frag */; };
+		B9ECD9CC1180BD430048E6AB /* readback.vert in Resources */ = {isa = PBXBuildFile; fileRef = B9ECD9BF1180BD430048E6AB /* readback.vert */; };
+		B9ECD9CD1180BD430048E6AB /* renderVT.frag in Resources */ = {isa = PBXBuildFile; fileRef = B9ECD9C01180BD430048E6AB /* renderVT.frag */; };
+		B9ECD9CE1180BD430048E6AB /* renderVT.vert in Resources */ = {isa = PBXBuildFile; fileRef = B9ECD9C11180BD430048E6AB /* renderVT.vert */; };
+		B9ECD9F21180C2080048E6AB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECD9F11180C2080048E6AB /* OpenGL.framework */; };
+		B9ECDA0C1180C2110048E6AB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECDA0B1180C2110048E6AB /* QuartzCore.framework */; };
+		B9ECDA4C1180C21B0048E6AB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECDA4B1180C21B0048E6AB /* CoreFoundation.framework */; };
+		B9ECDA821180C2290048E6AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECDA811180C2290048E6AB /* Cocoa.framework */; };
+		B9ECDA881180C2310048E6AB /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ECDA871180C2310048E6AB /* libboost_thread-mt.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* VTOSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTOSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B913F1AB11A75A61003B6CB6 /* libjpegturbo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpegturbo.a; path = "../Dependencies/lib-mac/libjpegturbo.a"; sourceTree = SOURCE_ROOT; };
+		B9ECD5541180B62F0048E6AB /* osgvt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = osgvt.cpp; sourceTree = "<group>"; };
+		B9ECD5551180B62F0048E6AB /* osgvt_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = osgvt_util.cpp; sourceTree = "<group>"; };
+		B9ECD6E61180B7E60048E6AB /* OpenThreads.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenThreads.framework; path = /Library/Frameworks/OpenThreads.framework; sourceTree = "<absolute>"; };
+		B9ECD6E71180B7E60048E6AB /* osg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osg.framework; path = /Library/Frameworks/osg.framework; sourceTree = "<absolute>"; };
+		B9ECD6E91180B7E60048E6AB /* osgDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgDB.framework; path = /Library/Frameworks/osgDB.framework; sourceTree = "<absolute>"; };
+		B9ECD6EA1180B7E60048E6AB /* osgFX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgFX.framework; path = /Library/Frameworks/osgFX.framework; sourceTree = "<absolute>"; };
+		B9ECD6EB1180B7E60048E6AB /* osgGA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgGA.framework; path = /Library/Frameworks/osgGA.framework; sourceTree = "<absolute>"; };
+		B9ECD6EC1180B7E60048E6AB /* osgIntrospection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgIntrospection.framework; path = /Library/Frameworks/osgIntrospection.framework; sourceTree = "<absolute>"; };
+		B9ECD6ED1180B7E60048E6AB /* osgManipulator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgManipulator.framework; path = /Library/Frameworks/osgManipulator.framework; sourceTree = "<absolute>"; };
+		B9ECD6EE1180B7E60048E6AB /* osgParticle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgParticle.framework; path = /Library/Frameworks/osgParticle.framework; sourceTree = "<absolute>"; };
+		B9ECD6EF1180B7E60048E6AB /* osgShadow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgShadow.framework; path = /Library/Frameworks/osgShadow.framework; sourceTree = "<absolute>"; };
+		B9ECD6F01180B7E60048E6AB /* osgSim.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgSim.framework; path = /Library/Frameworks/osgSim.framework; sourceTree = "<absolute>"; };
+		B9ECD6F11180B7E60048E6AB /* osgTerrain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgTerrain.framework; path = /Library/Frameworks/osgTerrain.framework; sourceTree = "<absolute>"; };
+		B9ECD6F21180B7E60048E6AB /* osgText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgText.framework; path = /Library/Frameworks/osgText.framework; sourceTree = "<absolute>"; };
+		B9ECD6F31180B7E60048E6AB /* osgUtil.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgUtil.framework; path = /Library/Frameworks/osgUtil.framework; sourceTree = "<absolute>"; };
+		B9ECD6F41180B7E60048E6AB /* osgViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgViewer.framework; path = /Library/Frameworks/osgViewer.framework; sourceTree = "<absolute>"; };
+		B9ECD6F51180B7E60048E6AB /* osgWidget.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = osgWidget.framework; path = /Library/Frameworks/osgWidget.framework; sourceTree = "<absolute>"; };
+		B9ECD9B21180BD430048E6AB /* LibVT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT.cpp; sourceTree = "<group>"; };
+		B9ECD9B31180BD430048E6AB /* LibVT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibVT.h; sourceTree = "<group>"; };
+		B9ECD9B41180BD430048E6AB /* LibVT_Cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_Cache.cpp; sourceTree = "<group>"; };
+		B9ECD9B51180BD430048E6AB /* LibVT_Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibVT_Config.h; sourceTree = "<group>"; };
+		B9ECD9B61180BD430048E6AB /* LibVT_ImageDecompression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_ImageDecompression.cpp; sourceTree = "<group>"; };
+		B9ECD9B81180BD430048E6AB /* LibVT_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibVT_Internal.h; sourceTree = "<group>"; };
+		B9ECD9BA1180BD430048E6AB /* LibVT_PageLoadingThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_PageLoadingThread.cpp; sourceTree = "<group>"; };
+		B9ECD9BB1180BD430048E6AB /* LibVT_PageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_PageTable.cpp; sourceTree = "<group>"; };
+		B9ECD9BC1180BD430048E6AB /* LibVT_Readback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_Readback.cpp; sourceTree = "<group>"; };
+		B9ECD9BD1180BD430048E6AB /* LibVT_Utilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_Utilities.cpp; sourceTree = "<group>"; };
+		B9ECD9BE1180BD430048E6AB /* readback.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = readback.frag; sourceTree = "<group>"; };
+		B9ECD9BF1180BD430048E6AB /* readback.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = readback.vert; sourceTree = "<group>"; };
+		B9ECD9C01180BD430048E6AB /* renderVT.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = renderVT.frag; sourceTree = "<group>"; };
+		B9ECD9C11180BD430048E6AB /* renderVT.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = renderVT.vert; sourceTree = "<group>"; };
+		B9ECD9F11180C2080048E6AB /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		B9ECDA0B1180C2110048E6AB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B9ECDA4B1180C21B0048E6AB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		B9ECDA811180C2290048E6AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		B9ECDA871180C2310048E6AB /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../Dependencies/lib-mac/libboost_thread-mt.a"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9ECD6F61180B7E60048E6AB /* OpenThreads.framework in Frameworks */,
+				B9ECD6F71180B7E60048E6AB /* osg.framework in Frameworks */,
+				B9ECD6F91180B7E60048E6AB /* osgDB.framework in Frameworks */,
+				B9ECD6FA1180B7E60048E6AB /* osgFX.framework in Frameworks */,
+				B9ECD6FB1180B7E60048E6AB /* osgGA.framework in Frameworks */,
+				B9ECD6FC1180B7E60048E6AB /* osgIntrospection.framework in Frameworks */,
+				B9ECD6FD1180B7E60048E6AB /* osgManipulator.framework in Frameworks */,
+				B9ECD6FE1180B7E60048E6AB /* osgParticle.framework in Frameworks */,
+				B9ECD6FF1180B7E60048E6AB /* osgShadow.framework in Frameworks */,
+				B9ECD7001180B7E60048E6AB /* osgSim.framework in Frameworks */,
+				B9ECD7011180B7E60048E6AB /* osgTerrain.framework in Frameworks */,
+				B9ECD7021180B7E60048E6AB /* osgText.framework in Frameworks */,
+				B9ECD7031180B7E60048E6AB /* osgUtil.framework in Frameworks */,
+				B9ECD7041180B7E60048E6AB /* osgViewer.framework in Frameworks */,
+				B9ECD7051180B7E70048E6AB /* osgWidget.framework in Frameworks */,
+				B9ECD9F21180C2080048E6AB /* OpenGL.framework in Frameworks */,
+				B9ECDA0C1180C2110048E6AB /* QuartzCore.framework in Frameworks */,
+				B9ECDA4C1180C21B0048E6AB /* CoreFoundation.framework in Frameworks */,
+				B9ECDA821180C2290048E6AB /* Cocoa.framework in Frameworks */,
+				B9ECDA881180C2310048E6AB /* libboost_thread-mt.a in Frameworks */,
+				B913F1AC11A75A61003B6CB6 /* libjpegturbo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* VTOSG.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* VTOSG */ = {
+			isa = PBXGroup;
+			children = (
+				B9ECD9B11180BD430048E6AB /* LibVT */,
+				B9ECD5531180B62F0048E6AB /* Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = VTOSG;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B913F1AB11A75A61003B6CB6 /* libjpegturbo.a */,
+				B9ECDA871180C2310048E6AB /* libboost_thread-mt.a */,
+				B9ECDA811180C2290048E6AB /* Cocoa.framework */,
+				B9ECDA4B1180C21B0048E6AB /* CoreFoundation.framework */,
+				B9ECDA0B1180C2110048E6AB /* QuartzCore.framework */,
+				B9ECD9F11180C2080048E6AB /* OpenGL.framework */,
+				B9ECD6E61180B7E60048E6AB /* OpenThreads.framework */,
+				B9ECD6E71180B7E60048E6AB /* osg.framework */,
+				B9ECD6E91180B7E60048E6AB /* osgDB.framework */,
+				B9ECD6EA1180B7E60048E6AB /* osgFX.framework */,
+				B9ECD6EB1180B7E60048E6AB /* osgGA.framework */,
+				B9ECD6EC1180B7E60048E6AB /* osgIntrospection.framework */,
+				B9ECD6ED1180B7E60048E6AB /* osgManipulator.framework */,
+				B9ECD6EE1180B7E60048E6AB /* osgParticle.framework */,
+				B9ECD6EF1180B7E60048E6AB /* osgShadow.framework */,
+				B9ECD6F01180B7E60048E6AB /* osgSim.framework */,
+				B9ECD6F11180B7E60048E6AB /* osgTerrain.framework */,
+				B9ECD6F21180B7E60048E6AB /* osgText.framework */,
+				B9ECD6F31180B7E60048E6AB /* osgUtil.framework */,
+				B9ECD6F41180B7E60048E6AB /* osgViewer.framework */,
+				B9ECD6F51180B7E60048E6AB /* osgWidget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9ECD5531180B62F0048E6AB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B9ECD5541180B62F0048E6AB /* osgvt.cpp */,
+				B9ECD5551180B62F0048E6AB /* osgvt_util.cpp */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B9ECD9B11180BD430048E6AB /* LibVT */ = {
+			isa = PBXGroup;
+			children = (
+				B9ECD9B21180BD430048E6AB /* LibVT.cpp */,
+				B9ECD9B31180BD430048E6AB /* LibVT.h */,
+				B9ECD9B41180BD430048E6AB /* LibVT_Cache.cpp */,
+				B9ECD9B51180BD430048E6AB /* LibVT_Config.h */,
+				B9ECD9B61180BD430048E6AB /* LibVT_ImageDecompression.cpp */,
+				B9ECD9B81180BD430048E6AB /* LibVT_Internal.h */,
+				B9ECD9BA1180BD430048E6AB /* LibVT_PageLoadingThread.cpp */,
+				B9ECD9BB1180BD430048E6AB /* LibVT_PageTable.cpp */,
+				B9ECD9BC1180BD430048E6AB /* LibVT_Readback.cpp */,
+				B9ECD9BD1180BD430048E6AB /* LibVT_Utilities.cpp */,
+				B9ECD9BE1180BD430048E6AB /* readback.frag */,
+				B9ECD9BF1180BD430048E6AB /* readback.vert */,
+				B9ECD9C01180BD430048E6AB /* renderVT.frag */,
+				B9ECD9C11180BD430048E6AB /* renderVT.vert */,
+			);
+			name = LibVT;
+			path = ../LibVT;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* VTOSG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "VTOSG" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VTOSG;
+			productInstallPath = "$(HOME)/Applications";
+			productName = VTOSG;
+			productReference = 8D1107320486CEB800E47090 /* VTOSG.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "VTOSG" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* VTOSG */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* VTOSG */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9ECD9CB1180BD430048E6AB /* readback.frag in Resources */,
+				B9ECD9CC1180BD430048E6AB /* readback.vert in Resources */,
+				B9ECD9CD1180BD430048E6AB /* renderVT.frag in Resources */,
+				B9ECD9CE1180BD430048E6AB /* renderVT.vert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9ECD5561180B62F0048E6AB /* osgvt.cpp in Sources */,
+				B9ECD5571180B62F0048E6AB /* osgvt_util.cpp in Sources */,
+				B9ECD9C21180BD430048E6AB /* LibVT.cpp in Sources */,
+				B9ECD9C31180BD430048E6AB /* LibVT_Cache.cpp in Sources */,
+				B9ECD9C41180BD430048E6AB /* LibVT_ImageDecompression.cpp in Sources */,
+				B9ECD9C71180BD430048E6AB /* LibVT_PageLoadingThread.cpp in Sources */,
+				B9ECD9C81180BD430048E6AB /* LibVT_PageTable.cpp in Sources */,
+				B9ECD9C91180BD430048E6AB /* LibVT_Readback.cpp in Sources */,
+				B9ECD9CA1180BD430048E6AB /* LibVT_Utilities.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Dependencies/lib-mac\"",
+				);
+				PRODUCT_NAME = VTOSG;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Dependencies/lib-mac\"",
+				);
+				PRODUCT_NAME = VTOSG;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../Dependencies/include/png,
+					../Dependencies/include/jpeg,
+					../Dependencies/include/boost,
+					../Dependencies/include/cml,
+					../Dependencies/include,
+					../Dependencies/source,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../Dependencies/include/png,
+					../Dependencies/include/jpeg,
+					../Dependencies/include/boost,
+					../Dependencies/include/cml,
+					../Dependencies/include,
+					../Dependencies/source,
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "VTOSG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "VTOSG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

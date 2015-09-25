@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <file alias="readback.frag">../LibVT/readback.frag</file>
+        <file alias="readback.vert">../LibVT/readback.vert</file>
+        <file alias="renderVT.frag">../LibVT/renderVT.frag</file>
+        <file alias="renderVT.vert">../LibVT/renderVT.vert</file>
+    </qresource>
+</RCC>

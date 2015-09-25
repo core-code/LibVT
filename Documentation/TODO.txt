@@ -1,0 +1,62 @@
+NOTE:
+ the new SVN is here
+https://libvt.svn.sourceforge.net/svnroot/libvt
+ instead of here
+https://svn.cg.tuwien.ac.at/data/trac/vissampling/browser/trunk/VirtualTexturing/VirtualTexturing/
+
+
+FEATURES:
+	Multiple virtual textures at once
+	Smoothly blend in new tiles to prevent LOD snap
+	Plug in a procedural content production system instead of loading tiles from disk.
+	Do Decals / transparency etc.
+	Adapt LibVT for a more real world scenario, i.e. have channels for normal/spec map in the virtual texture
+	Check INTEL/AMD GPU.
+	Filtering with borders by increasing the real page size instead of decreasing the used portion of each tile.
+	build an fully fledged virtual texturing editor.
+	Other tile priorities than just pixel amount, see thesis. Also tile priority other than FIFO for the cache (see tile importance in the thesis)
+	advanced tile handling see tile request substitution in the thesis for a start
+	Support trilinear filtering with DXT precompressed tiles or with PBO transfers to the physical texture
+
+
+PERFORMANCE:
+	Perform texture up/down-loads using 2 PBOs instead of one for improved performance. Additionally try to figure out when transfers are finished with fence objects.
+	More fine grained page table texture updates 
+	Test float pagetable performance
+	Test integer shader
+	test how much difference it makes performance wise if the values in vtConfig are real constants. 
+	trilinear filtering: don't downsample ourselves if the smaller tile is available in the cache anyway?
+	Preallocate cache and other buffers so we don't need constant malloc()/free()ing
+
+
+TILEDET:
+	plug in some other tile determination method. modifying the prepass method to do it in UV space should be easy and if the engine does OC, it shouldn't have a much larger result. analytic would be nice.
+	Perform tiledetermination with small FoV increase or with a larger FoV increase while adjusting the bias to compensate.
+	Tiledet with GL_ARB_texture_query_lod
+	Try to do readback with a renderbuffer instead of a texture
+
+
+OPENCL:
+	fix opencl with long mipmap chain
+	retain pixelcount with opencl buffer reduction
+	get opencl working with OSG
+
+
+PREPROCESSING (& STREAMING):
+	build a VT OPTIMIZED TEXTURE ATLAS, see thesis for problems that the atlas can have
+	texture atlas tool: implement the "Original NOT adjusted, atlas adjusted" --halftexel option as described in "Using Coordinates in the Zero-to-One Range" chapter in the NVIDIA Texture Atlas Whitepaper
+	we should really make the virtual texture tile store one big file instead of millions of small files. ditch the jpeg header, don't need this two million times. tile streaming should always load about 32k - 128k in one go, meaning multiple tiles. the issue is that we probably need to constify the compression ratio so that the blocks of 4 files align on 32k boundaries...
+	generateVirtualTextureTiles.py: ditch PIL (for performance and quality -- most visual quality problems come from bad downsampling in PIL)
+	using something JPEG-XR (id is using this) or another modern image format to get filesizes to less than half of the JPEG with the same quality. the problem seems there are no high-speed (and open!?) decompression libraries for anything better than JPEG ;(
+
+
+
+DXT:
+	realtime dxt compression (using FastDXT) seems to be broken on WIN32 when enabling intrinsics (at least when cross compiling from a mac using gcc) and without it the performance isn't good
+	get the Extreme DXT compression code working and integrated
+
+TESTS:
+	michi wanted the same tests on newer hardware and the detailed quality test also on the new york scene.
+	i think tests are mainly interesting for possible new features (tile streaming with JPEG-XR, tile streaming from a single file, quality with different tile importance metrics and pre-caching methods, quality and performance with improved texture atlas packing, etc)
+
+anything in the thesis labeled as interesting future research and not mentioned here…

@@ -1,0 +1,139 @@
+#ifdef __APPLE__
+	#import <TargetConditionals.h>
+	#include <mach/mach.h>
+	#include <mach/mach_time.h>
+#endif
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
+
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE // iPhone
+	#import <QuartzCore/QuartzCore.h>
+
+	#ifdef __OBJC__
+		#import <UIKit/UIKit.h>
+		#include <OpenGLES/EAGL.h>
+		#include <OpenGLES/EAGLDrawable.h>
+	#endif
+
+	#ifdef IPHONE_SHADERS
+		#include <OpenGLES/ES2/gl.h>
+		#include <OpenGLES/ES2/glext.h>
+	#else
+		#include <OpenGLES/ES1/gl.h>
+		#include <OpenGLES/ES1/glext.h>
+	#endif
+
+	#define GL_POINT_SPRITE GL_POINT_SPRITE_OES
+	#define GL_COORD_REPLACE GL_COORD_REPLACE_OES
+
+	#include <AudioToolbox/AudioToolbox.h>
+#else
+	#undef TARGET_OS_IPHONE
+	
+	#if defined(TARGET_OS_MAC) && TARGET_OS_MAC // Mac
+		#include <OpenGL/OpenGL.h>
+		#include <OpenGL/glu.h>
+		#include <Carbon/Carbon.h>
+	#else										// Win / Linux
+
+		//#include <windows.h>
+
+
+		#include <stdio.h>
+		#include <stdlib.h>
+		#include <stdint.h>
+		#include <stdarg.h>
+
+
+		#include <OpenGL/gl.h>
+		#include <OpenGL/glu.h>
+		#include <OpenGL/glext.h>
+		#ifdef WIN32
+			#include "opengl_win32.h"
+		#endif
+		#ifdef linux
+			#include "opengl_linux.h"
+		#endif
+	#endif
+
+	#ifdef __OBJC__
+		#ifdef linux
+			#import <Foundation/Foundation.h>
+		#else
+			#import <Cocoa/Cocoa.h>
+		#endif
+	#endif
+#endif
+
+
+#ifdef __cplusplus
+	#import <cml/cml.h>
+	using namespace std;
+	//using namespace cml;
+	typedef cml::vector< float, cml::external<3> > vector3fe;
+	typedef cml::matrix< float, cml::external<4,4>, cml::col_basis, cml::col_major > matrix44f_ce;
+	typedef cml::matrix< double, cml::external<4,4>, cml::col_basis, cml::col_major > matrix44d_ce;
+	typedef cml::matrix44f_c matrix44f_c;
+	typedef cml::matrix33f_c matrix33f_c;
+	typedef cml::vector2f vector2f;
+	typedef cml::vector3f vector3f;
+	typedef cml::vector4f vector4f;
+#endif
+
+
+#ifdef SDL_BACKEND
+#include "SDL.h"
+
+static inline void fatal(const char *err, ...) {
+	va_list ap;
+
+	va_start (ap, err);
+	vfprintf (stderr, err, ap);
+	va_end (ap);
+	SDL_ShowCursor(SDL_ENABLE);
+	SDL_Quit();
+	exit(1);
+}
+#else
+	#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE || defined(linux)
+		#define fatal(fmt, ...) {char *tmp = NULL; asprintf (&tmp, fmt, ## __VA_ARGS__); fprintf(stderr, fmt, ## __VA_ARGS__); exit(1);}
+	#else
+		#ifdef WIN32
+			static inline void fatal(const char *err, ...) {va_list ap; va_start (ap, err); vfprintf (stderr, err, ap); va_end (ap); exit(1); }
+		#else
+			#define fatal(fmt, ...) {char *tmp = NULL; asprintf (&tmp, fmt, ## __VA_ARGS__); fprintf(stderr, fmt, ## __VA_ARGS__); NSRunCriticalAlertPanel(@"Core3D", [NSString stringWithUTF8String:tmp], @"OK", nil, nil); exit(1);}
+		#endif
+	#endif
+#endif
+
+#ifdef DEBUG
+	#if defined(TARGET_OS_IPHONE) || defined(WIN32)
+		#define glError() { \
+			GLenum err = glGetError(); \
+			while (err != GL_NO_ERROR) { \
+				fprintf(stderr, "glError caught at %i %s:%u\n", err, __FILE__, __LINE__); \
+				err = glGetError(); \
+			} \
+		}
+	#else
+		#define glError() { \
+			GLenum err = glGetError(); \
+			while (err != GL_NO_ERROR) { \
+				fprintf(stderr, "glError: %s caught at %s:%u\n", (char *)gluErrorString(err), __FILE__, __LINE__); \
+				err = glGetError(); \
+				exit(1); \
+			} \
+		}
+	#endif
+#else
+	#define glError()
+#endif
+
+#define SET1(obj,val1,arg1)									[obj set##val1:arg1];
+#define SET2(obj,val1,arg1,val2,arg2)						[obj set##val1:arg1];[obj set##val2:arg2];
+#define SET3(obj,val1,arg1,val2,arg2,val3,arg3)				[obj set##val1:arg1];[obj set##val2:arg2];[obj set##val3:arg3];
+#define SET4(obj,val1,arg1,val2,arg2,val3,arg3,val4,arg4)	[obj set##val1:arg1];[obj set##val2:arg2];[obj set##val3:arg3];[obj set##val4:arg4];
+
+#define CLAMP(x, low, high) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))

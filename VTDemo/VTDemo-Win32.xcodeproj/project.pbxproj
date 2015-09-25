@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B91EFA2611CFA9E80015F61F /* LibVT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA0D11CFA9E80015F61F /* LibVT.cpp */; };
+		B91EFA2711CFA9E80015F61F /* LibVT_Cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA0F11CFA9E80015F61F /* LibVT_Cache.cpp */; };
+		B91EFA2811CFA9E80015F61F /* LibVT_ImageDecompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA1111CFA9E80015F61F /* LibVT_ImageDecompression.cpp */; };
+		B91EFA2B11CFA9E80015F61F /* LibVT_PageLoadingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA1511CFA9E80015F61F /* LibVT_PageLoadingThread.cpp */; };
+		B91EFA2C11CFA9E80015F61F /* LibVT_PageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA1611CFA9E80015F61F /* LibVT_PageTable.cpp */; };
+		B91EFA2D11CFA9E80015F61F /* LibVT_Readback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA1711CFA9E80015F61F /* LibVT_Readback.cpp */; };
+		B91EFA2E11CFA9E80015F61F /* LibVT_TextureCompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA1811CFA9E80015F61F /* LibVT_TextureCompression.cpp */; };
+		B91EFA2F11CFA9E80015F61F /* LibVT_Utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFA1911CFA9E80015F61F /* LibVT_Utilities.cpp */; };
+		B91EFAAA11CFAA4B0015F61F /* Simulation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAA311CFAA4B0015F61F /* Simulation.mm */; };
+		B91EFAAC11CFAA4B0015F61F /* VirtualTexturingNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAA711CFAA4B0015F61F /* VirtualTexturingNode.mm */; };
+		B91EFAD011CFAA670015F61F /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAB111CFAA670015F61F /* Camera.mm */; };
+		B91EFAD211CFAA670015F61F /* Mesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAB511CFAA670015F61F /* Mesh.mm */; };
+		B91EFAD411CFAA670015F61F /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAB911CFAA670015F61F /* Scene.mm */; };
+		B91EFAD511CFAA670015F61F /* SceneNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFABB11CFAA670015F61F /* SceneNode.mm */; };
+		B91EFADA11CFAA670015F61F /* SDLOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAC511CFAA670015F61F /* SDLOpenGLView.mm */; };
+		B91EFADC11CFAA670015F61F /* opengl_win32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFACA11CFAA670015F61F /* opengl_win32.cpp */; };
+		B91EFADD11CFAA670015F61F /* StateUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFACD11CFAA670015F61F /* StateUtilities.mm */; };
+		B91EFADE11CFAA670015F61F /* Utilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91EFACF11CFAA670015F61F /* Utilities.mm */; };
+		B91EFAE811CFAB0C0015F61F /* stb_image.cc in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAE711CFAB0C0015F61F /* stb_image.cc */; settings = {COMPILER_FLAGS = "-Wno-uninitialized -Wno-write-strings -O3"; }; };
+		B91EFAEC11CFAB190015F61F /* dxt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAE911CFAB190015F61F /* dxt.cpp */; };
+		B91EFAED11CFAB190015F61F /* intrinsic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91EFAEB11CFAB190015F61F /* intrinsic.cpp */; };
+		B91EFB6D11CFAD840015F61F /* SDL.dll in CopyFiles */ = {isa = PBXBuildFile; fileRef = B91EFB5411CFAD6F0015F61F /* SDL.dll */; };
+		B91EFC2A11CFB1950015F61F /* testscene.octree in Resources */ = {isa = PBXBuildFile; fileRef = B91EFBDA11CFB1950015F61F /* testscene.octree */; };
+		B932266C12675102008393BB /* CollideableMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = B932266712675102008393BB /* CollideableMesh.mm */; };
+		B932266D12675102008393BB /* LODNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B932266912675102008393BB /* LODNode.mm */; };
+		B932266E12675102008393BB /* Skybox.mm in Sources */ = {isa = PBXBuildFile; fileRef = B932266B12675102008393BB /* Skybox.mm */; };
+		B944B71C1243B6500062CF26 /* combined.frag in Resources */ = {isa = PBXBuildFile; fileRef = B944B7161243B6500062CF26 /* combined.frag */; };
+		B944B71D1243B6500062CF26 /* combined.vert in Resources */ = {isa = PBXBuildFile; fileRef = B944B7171243B6500062CF26 /* combined.vert */; };
+		B944B71E1243B6500062CF26 /* readback.frag in Resources */ = {isa = PBXBuildFile; fileRef = B944B7181243B6500062CF26 /* readback.frag */; };
+		B944B71F1243B6500062CF26 /* readback.vert in Resources */ = {isa = PBXBuildFile; fileRef = B944B7191243B6500062CF26 /* readback.vert */; };
+		B944B7201243B6500062CF26 /* renderVT.frag in Resources */ = {isa = PBXBuildFile; fileRef = B944B71A1243B6500062CF26 /* renderVT.frag */; };
+		B944B7211243B6500062CF26 /* renderVT.vert in Resources */ = {isa = PBXBuildFile; fileRef = B944B71B1243B6500062CF26 /* renderVT.vert */; };
+		FE4733590C876FA1002B72EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FEF2EB7D0C87B952001FC5A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		FEF2EB7E0C87B959001FC5A8 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		FE4733600C876FDE002B72EF /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = org.cocotron.1.0.windows.i386.gcc.default;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B91EFB3711CFAD230015F61F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Windows;
+			dstSubfolderSpec = 1;
+			files = (
+				B91EFB6D11CFAD840015F61F /* SDL.dll in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B91EFA0D11CFA9E80015F61F /* LibVT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT.cpp; sourceTree = "<group>"; };
+		B91EFA0E11CFA9E80015F61F /* LibVT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibVT.h; sourceTree = "<group>"; };
+		B91EFA0F11CFA9E80015F61F /* LibVT_Cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_Cache.cpp; sourceTree = "<group>"; };
+		B91EFA1011CFA9E80015F61F /* LibVT_Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibVT_Config.h; sourceTree = "<group>"; };
+		B91EFA1111CFA9E80015F61F /* LibVT_ImageDecompression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_ImageDecompression.cpp; sourceTree = "<group>"; };
+		B91EFA1311CFA9E80015F61F /* LibVT_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibVT_Internal.h; sourceTree = "<group>"; };
+		B91EFA1511CFA9E80015F61F /* LibVT_PageLoadingThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_PageLoadingThread.cpp; sourceTree = "<group>"; };
+		B91EFA1611CFA9E80015F61F /* LibVT_PageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_PageTable.cpp; sourceTree = "<group>"; };
+		B91EFA1711CFA9E80015F61F /* LibVT_Readback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_Readback.cpp; sourceTree = "<group>"; };
+		B91EFA1811CFA9E80015F61F /* LibVT_TextureCompression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_TextureCompression.cpp; sourceTree = "<group>"; };
+		B91EFA1911CFA9E80015F61F /* LibVT_Utilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibVT_Utilities.cpp; sourceTree = "<group>"; };
+		B91EFAA211CFAA4B0015F61F /* Simulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulation.h; sourceTree = "<group>"; };
+		B91EFAA311CFAA4B0015F61F /* Simulation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Simulation.mm; sourceTree = "<group>"; };
+		B91EFAA611CFAA4B0015F61F /* VirtualTexturingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualTexturingNode.h; sourceTree = "<group>"; };
+		B91EFAA711CFAA4B0015F61F /* VirtualTexturingNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VirtualTexturingNode.mm; sourceTree = "<group>"; };
+		B91EFAB011CFAA670015F61F /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		B91EFAB111CFAA670015F61F /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
+		B91EFAB411CFAA670015F61F /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		B91EFAB511CFAA670015F61F /* Mesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Mesh.mm; sourceTree = "<group>"; };
+		B91EFAB811CFAA670015F61F /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B91EFAB911CFAA670015F61F /* Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		B91EFABA11CFAA670015F61F /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneNode.h; sourceTree = "<group>"; };
+		B91EFABB11CFAA670015F61F /* SceneNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneNode.mm; sourceTree = "<group>"; };
+		B91EFABD11CFAA670015F61F /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
+		B91EFABE11CFAA670015F61F /* CocoaOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenGLView.mm; sourceTree = "<group>"; };
+		B91EFAC511CFAA670015F61F /* SDLOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SDLOpenGLView.mm; sourceTree = "<group>"; };
+		B91EFAC811CFAA670015F61F /* Core3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D.h; sourceTree = "<group>"; };
+		B91EFAC911CFAA670015F61F /* Core3D_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D_Prefix.pch; sourceTree = "<group>"; };
+		B91EFACA11CFAA670015F61F /* opengl_win32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_win32.cpp; sourceTree = "<group>"; };
+		B91EFACB11CFAA670015F61F /* opengl_win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opengl_win32.h; sourceTree = "<group>"; };
+		B91EFACC11CFAA670015F61F /* StateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateUtilities.h; sourceTree = "<group>"; };
+		B91EFACD11CFAA670015F61F /* StateUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StateUtilities.mm; sourceTree = "<group>"; };
+		B91EFACE11CFAA670015F61F /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		B91EFACF11CFAA670015F61F /* Utilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utilities.mm; sourceTree = "<group>"; };
+		B91EFAE711CFAB0C0015F61F /* stb_image.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cc; path = ../Dependencies/source/stb_image.cc; sourceTree = SOURCE_ROOT; };
+		B91EFAE911CFAB190015F61F /* dxt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dxt.cpp; path = ../Dependencies/source/DXT/FastDXT/dxt.cpp; sourceTree = SOURCE_ROOT; };
+		B91EFAEA11CFAB190015F61F /* dxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dxt.h; path = ../Dependencies/source/DXT/FastDXT/dxt.h; sourceTree = SOURCE_ROOT; };
+		B91EFAEB11CFAB190015F61F /* intrinsic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intrinsic.cpp; path = ../Dependencies/source/DXT/FastDXT/intrinsic.cpp; sourceTree = SOURCE_ROOT; };
+		B91EFB5411CFAD6F0015F61F /* SDL.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDL.dll; sourceTree = "<group>"; };
+		B91EFBD111CFB1950015F61F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B91EFBDA11CFB1950015F61F /* testscene.octree */ = {isa = PBXFileReference; lastKnownFileType = file; path = testscene.octree; sourceTree = "<group>"; };
+		B932266612675102008393BB /* CollideableMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollideableMesh.h; sourceTree = "<group>"; };
+		B932266712675102008393BB /* CollideableMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CollideableMesh.mm; sourceTree = "<group>"; };
+		B932266812675102008393BB /* LODNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LODNode.h; sourceTree = "<group>"; };
+		B932266912675102008393BB /* LODNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LODNode.mm; sourceTree = "<group>"; };
+		B932266A12675102008393BB /* Skybox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skybox.h; sourceTree = "<group>"; };
+		B932266B12675102008393BB /* Skybox.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Skybox.mm; sourceTree = "<group>"; };
+		B944B7161243B6500062CF26 /* combined.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = combined.frag; path = ../LibVT/combined.frag; sourceTree = SOURCE_ROOT; };
+		B944B7171243B6500062CF26 /* combined.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = combined.vert; path = ../LibVT/combined.vert; sourceTree = SOURCE_ROOT; };
+		B944B7181243B6500062CF26 /* readback.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = readback.frag; path = ../LibVT/readback.frag; sourceTree = SOURCE_ROOT; };
+		B944B7191243B6500062CF26 /* readback.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = readback.vert; path = ../LibVT/readback.vert; sourceTree = SOURCE_ROOT; };
+		B944B71A1243B6500062CF26 /* renderVT.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = renderVT.frag; path = ../LibVT/renderVT.frag; sourceTree = SOURCE_ROOT; };
+		B944B71B1243B6500062CF26 /* renderVT.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = renderVT.vert; path = ../LibVT/renderVT.vert; sourceTree = SOURCE_ROOT; };
+		FE47335D0C876FA1002B72EF /* VTDemo-Win32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTDemo-Win32.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE4733580C876FA1002B72EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE4733590C876FA1002B72EF /* Cocoa.framework in Frameworks */,
+				FEF2EB7D0C87B952001FC5A8 /* Foundation.framework in Frameworks */,
+				FEF2EB7E0C87B959001FC5A8 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE47335D0C876FA1002B72EF /* VTDemo-Win32.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* VTDemo-Win32 */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFAA111CFAA4B0015F61F /* Sources */,
+				B91EFA0811CFA9E80015F61F /* LibVT */,
+				B932266512675102008393BB /* SpecialNodes */,
+				B91EFAAF11CFAA670015F61F /* CoreEngine */,
+				B91EFABC11CFAA670015F61F /* PlatformSupport */,
+				B91EFAC611CFAA670015F61F /* Utilities */,
+				B91EFB8D11CFB1950015F61F /* Resources */,
+				B91EFB3E11CFAD6F0015F61F /* lib-win32 */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "VTDemo-Win32";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B91EFA0811CFA9E80015F61F /* LibVT */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFA0D11CFA9E80015F61F /* LibVT.cpp */,
+				B91EFA0E11CFA9E80015F61F /* LibVT.h */,
+				B91EFA0F11CFA9E80015F61F /* LibVT_Cache.cpp */,
+				B91EFA1011CFA9E80015F61F /* LibVT_Config.h */,
+				B91EFA1111CFA9E80015F61F /* LibVT_ImageDecompression.cpp */,
+				B91EFA1311CFA9E80015F61F /* LibVT_Internal.h */,
+				B91EFA1511CFA9E80015F61F /* LibVT_PageLoadingThread.cpp */,
+				B91EFA1611CFA9E80015F61F /* LibVT_PageTable.cpp */,
+				B91EFA1711CFA9E80015F61F /* LibVT_Readback.cpp */,
+				B91EFA1811CFA9E80015F61F /* LibVT_TextureCompression.cpp */,
+				B91EFA1911CFA9E80015F61F /* LibVT_Utilities.cpp */,
+			);
+			name = LibVT;
+			path = ../LibVT;
+			sourceTree = SOURCE_ROOT;
+		};
+		B91EFAA111CFAA4B0015F61F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFAA211CFAA4B0015F61F /* Simulation.h */,
+				B91EFAA311CFAA4B0015F61F /* Simulation.mm */,
+				B91EFAA611CFAA4B0015F61F /* VirtualTexturingNode.h */,
+				B91EFAA711CFAA4B0015F61F /* VirtualTexturingNode.mm */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B91EFAAF11CFAA670015F61F /* CoreEngine */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFAB011CFAA670015F61F /* Camera.h */,
+				B91EFAB111CFAA670015F61F /* Camera.mm */,
+				B91EFAB411CFAA670015F61F /* Mesh.h */,
+				B91EFAB511CFAA670015F61F /* Mesh.mm */,
+				B91EFAB811CFAA670015F61F /* Scene.h */,
+				B91EFAB911CFAA670015F61F /* Scene.mm */,
+				B91EFABA11CFAA670015F61F /* SceneNode.h */,
+				B91EFABB11CFAA670015F61F /* SceneNode.mm */,
+			);
+			name = CoreEngine;
+			path = ../Dependencies/Core3D/CoreEngine;
+			sourceTree = SOURCE_ROOT;
+		};
+		B91EFABC11CFAA670015F61F /* PlatformSupport */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFABD11CFAA670015F61F /* CocoaOpenGLView.h */,
+				B91EFABE11CFAA670015F61F /* CocoaOpenGLView.mm */,
+				B91EFAC511CFAA670015F61F /* SDLOpenGLView.mm */,
+			);
+			name = PlatformSupport;
+			path = ../Dependencies/Core3D/PlatformSupport;
+			sourceTree = SOURCE_ROOT;
+		};
+		B91EFAC611CFAA670015F61F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFAE911CFAB190015F61F /* dxt.cpp */,
+				B91EFAEA11CFAB190015F61F /* dxt.h */,
+				B91EFAEB11CFAB190015F61F /* intrinsic.cpp */,
+				B91EFAC811CFAA670015F61F /* Core3D.h */,
+				B91EFAC911CFAA670015F61F /* Core3D_Prefix.pch */,
+				B91EFACA11CFAA670015F61F /* opengl_win32.cpp */,
+				B91EFACB11CFAA670015F61F /* opengl_win32.h */,
+				B91EFACC11CFAA670015F61F /* StateUtilities.h */,
+				B91EFACD11CFAA670015F61F /* StateUtilities.mm */,
+				B91EFACE11CFAA670015F61F /* Utilities.h */,
+				B91EFACF11CFAA670015F61F /* Utilities.mm */,
+				B91EFAE711CFAB0C0015F61F /* stb_image.cc */,
+			);
+			name = Utilities;
+			path = ../Dependencies/Core3D/Utilities;
+			sourceTree = SOURCE_ROOT;
+		};
+		B91EFB3E11CFAD6F0015F61F /* lib-win32 */ = {
+			isa = PBXGroup;
+			children = (
+				B91EFB5411CFAD6F0015F61F /* SDL.dll */,
+			);
+			name = "lib-win32";
+			path = "../Dependencies/lib-win32";
+			sourceTree = SOURCE_ROOT;
+		};
+		B91EFB8D11CFB1950015F61F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B944B7161243B6500062CF26 /* combined.frag */,
+				B944B7171243B6500062CF26 /* combined.vert */,
+				B944B7181243B6500062CF26 /* readback.frag */,
+				B944B7191243B6500062CF26 /* readback.vert */,
+				B944B71A1243B6500062CF26 /* renderVT.frag */,
+				B944B71B1243B6500062CF26 /* renderVT.vert */,
+				B91EFBD111CFB1950015F61F /* Info.plist */,
+				B91EFBDA11CFB1950015F61F /* testscene.octree */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B932266512675102008393BB /* SpecialNodes */ = {
+			isa = PBXGroup;
+			children = (
+				B932266612675102008393BB /* CollideableMesh.h */,
+				B932266712675102008393BB /* CollideableMesh.mm */,
+				B932266812675102008393BB /* LODNode.h */,
+				B932266912675102008393BB /* LODNode.mm */,
+				B932266A12675102008393BB /* Skybox.h */,
+				B932266B12675102008393BB /* Skybox.mm */,
+			);
+			name = SpecialNodes;
+			path = ../Dependencies/Core3D/SpecialNodes;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE4733510C876FA1002B72EF /* VTDemo-Win32 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE47335B0C876FA1002B72EF /* Build configuration list for PBXNativeTarget "VTDemo-Win32" */;
+			buildPhases = (
+				FE4733520C876FA1002B72EF /* Resources */,
+				FE4733550C876FA1002B72EF /* Sources */,
+				FE4733580C876FA1002B72EF /* Frameworks */,
+				FE2D932D0D491258005B7813 /* ShellScript */,
+				B91EFB3711CFAD230015F61F /* CopyFiles */,
+			);
+			buildRules = (
+				FE4733600C876FDE002B72EF /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "VTDemo-Win32";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "VTDemo-Win32";
+			productReference = FE47335D0C876FA1002B72EF /* VTDemo-Win32.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "VTDemo-Win32" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* VTDemo-Win32 */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE4733510C876FA1002B72EF /* VTDemo-Win32 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE4733520C876FA1002B72EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944B71C1243B6500062CF26 /* combined.frag in Resources */,
+				B944B71D1243B6500062CF26 /* combined.vert in Resources */,
+				B944B71E1243B6500062CF26 /* readback.frag in Resources */,
+				B944B71F1243B6500062CF26 /* readback.vert in Resources */,
+				B944B7201243B6500062CF26 /* renderVT.frag in Resources */,
+				B944B7211243B6500062CF26 /* renderVT.vert in Resources */,
+				B91EFC2A11CFB1950015F61F /* testscene.octree in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE2D932D0D491258005B7813 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Developer/Cocotron/1.0/bin/retargetBundle -framework Foundation -framework AppKit -destination $TARGET_BUILD_DIR\"/\"$EXECUTABLE_FOLDER_PATH\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE4733550C876FA1002B72EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91EFA2611CFA9E80015F61F /* LibVT.cpp in Sources */,
+				B91EFA2711CFA9E80015F61F /* LibVT_Cache.cpp in Sources */,
+				B91EFA2811CFA9E80015F61F /* LibVT_ImageDecompression.cpp in Sources */,
+				B91EFA2B11CFA9E80015F61F /* LibVT_PageLoadingThread.cpp in Sources */,
+				B91EFA2C11CFA9E80015F61F /* LibVT_PageTable.cpp in Sources */,
+				B91EFA2D11CFA9E80015F61F /* LibVT_Readback.cpp in Sources */,
+				B91EFA2E11CFA9E80015F61F /* LibVT_TextureCompression.cpp in Sources */,
+				B91EFA2F11CFA9E80015F61F /* LibVT_Utilities.cpp in Sources */,
+				B91EFAAA11CFAA4B0015F61F /* Simulation.mm in Sources */,
+				B91EFAAC11CFAA4B0015F61F /* VirtualTexturingNode.mm in Sources */,
+				B91EFAD011CFAA670015F61F /* Camera.mm in Sources */,
+				B91EFAD211CFAA670015F61F /* Mesh.mm in Sources */,
+				B91EFAD411CFAA670015F61F /* Scene.mm in Sources */,
+				B91EFAD511CFAA670015F61F /* SceneNode.mm in Sources */,
+				B91EFADA11CFAA670015F61F /* SDLOpenGLView.mm in Sources */,
+				B91EFADC11CFAA670015F61F /* opengl_win32.cpp in Sources */,
+				B91EFADD11CFAA670015F61F /* StateUtilities.mm in Sources */,
+				B91EFADE11CFAA670015F61F /* Utilities.mm in Sources */,
+				B91EFAE811CFAB0C0015F61F /* stb_image.cc in Sources */,
+				B91EFAEC11CFAB190015F61F /* dxt.cpp in Sources */,
+				B91EFAED11CFAB190015F61F /* intrinsic.cpp in Sources */,
+				B932266C12675102008393BB /* CollideableMesh.mm in Sources */,
+				B932266D12675102008393BB /* LODNode.mm in Sources */,
+				B932266E12675102008393BB /* Skybox.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF5008A954540054247B /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Windows";
+				EXECUTABLE_SUFFIX = .exe;
+				FRAMEWORK_SEARCH_PATHS = /Developer/Cocotron/1.0/Windows/i386/Frameworks;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = ../Dependencies/Core3D/Utilities/Core3D_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"BROKENINSTR=1",
+					"NO_GLEE=1",
+					"DISABLE_COLLISION=1",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../Dependencies/include/png,
+					../Dependencies/include/jpeg,
+					../Dependencies/include/boost,
+					../Dependencies/include/cml,
+					../Dependencies/include,
+					../Dependencies/source,
+					../Dependencies/source/DXT/FastDXT/,
+					/Library/Frameworks/SDL.framework/Versions/A/Headers,
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$SRCROOT/../Dependencies/lib-win32";
+				OTHER_LDFLAGS = (
+					"-Wl",
+					"--enable-auto-import",
+					"-mwindows",
+					"-mconsole",
+					"-lopengl32",
+					"-lglu32",
+					"-ldevil",
+					"-lmingw32",
+					"-lSDLmain",
+					"-lSDL",
+					"-lboost_thread-mt",
+					"-Wl,-Bstatic",
+					"-lturbojpeg",
+					"-Wl,-Bdynamic",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "VTDemo-Win32";
+				SDKROOT = "";
+				SYMROOT = /Users/julian/Documents/Development/_BUILD/WINDOWS/;
+				USER_HEADER_SEARCH_PATHS = "../LibVT/ Sources ../Dependencies/Core3D/Utilities//** ../Dependencies/Core3D/PlatformSupport//** ../Dependencies/Core3D/SpecialNodes//** ../Dependencies/Core3D/CoreEngine//**";
+			};
+			name = Deployment;
+		};
+		FE47335C0C876FA1002B72EF /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "VTDemo-Win32" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF5008A954540054247B /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		FE47335B0C876FA1002B72EF /* Build configuration list for PBXNativeTarget "VTDemo-Win32" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE47335C0C876FA1002B72EF /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
